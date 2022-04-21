@@ -1,34 +1,34 @@
 import './App.css';
 import React from 'react';
 
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-const firebaseConfig = {
+firebase.initializeApp({
   apiKey: "AIzaSyA8VA5lETYBAJuK3Ewxyl1AapLIPWPeFS0",
   authDomain: "superchat-4164d.firebaseapp.com",
   projectId: "superchat-4164d",
   storageBucket: "superchat-4164d.appspot.com",
   messagingSenderId: "845292735645",
   appId: "1:845292735645:web:b8aca44a9838e944dd9874"
-};
+});
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 function App() {
-  const [user] = useAuthState(auth);
+  //const [user] = useAuthState(auth);
   return (
     <div className="App">
       <header>
 
       </header>
       <section>
-        {user ? <ChatRoom /> : <SignIn />}
+        {/* { {user ? <ChatRoom /> : <SignIn />} } */<ChatRoom/>}
       </section>
     </div>
   );
