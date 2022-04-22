@@ -14,18 +14,18 @@ import {
   addDoc,
 } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyDIXJ5YT7hoNbBFqK3TBcV41-TzIO-7n7w",
-  authDomain: "fir-auth-6edd8.firebaseapp.com",
-  projectId: "fir-auth-6edd8",
-  storageBucket: "fir-auth-6edd8.appspot.com",
-  messagingSenderId: "904760319835",
-  appId: "1:904760319835:web:44fd0d957f114b4e51447e",
-  measurementId: "G-Q4TYKH9GG7",
+  apiKey: "AIzaSyA8VA5lETYBAJuK3Ewxyl1AapLIPWPeFS0",
+  authDomain: "superchat-4164d.firebaseapp.com",
+  projectId: "superchat-4164d",
+  storageBucket: "superchat-4164d.appspot.com",
+  messagingSenderId: "845292735645",
+  appId: "1:845292735645:web:b8aca44a9838e944dd9874"
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
+
 const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);

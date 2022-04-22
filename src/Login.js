@@ -11,13 +11,15 @@ function Login() {
       // maybe trigger a loading screen
       return;
     }
-    if (user) navigate2("/chatroom");
+    if (user) navigate2("/dashboard");
   }, [user, loading]);
   return (
     <div className="login">
+      <div className="login__container">
         <button className="login__btn login__google" onClick={signInWithGoogle}>
           Login with Google
         </button>
+      </div>
     </div>
   );
 }
